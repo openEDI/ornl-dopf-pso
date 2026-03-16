@@ -1,0 +1,19 @@
+{
+    "directory": "dopf_federate",
+    "execute_function": "python -m src.dopf_federate.dopf_federate",
+    "static_inputs": [
+        {"type": "", "port_id": "name", "description": "Federate name", "unit": ""},
+        {"type": "", "port_id": "pv_buses", "description": "List of PV system bus IDs", "unit": ""},
+        {"type": "", "port_id": "pv_capacity_kw", "description": "PV capacity in kW per system", "unit": "kW"},
+        {"type": "", "port_id": "algorithm_parameters", "description": "PSO parameters", "unit": ""}
+    ],
+    "dynamic_inputs": [
+        {"type": "PowersReal", "port_id": "powers_real", "description": "Real power measurements from feeder", "unit": "kW"},
+        {"type": "PowersImaginary", "port_id": "powers_imag", "description": "Reactive power measurements from feeder", "unit": "kVAR"},
+        {"type": "Topology", "port_id": "topology", "description": "Network topology with Y-bus", "unit": ""},
+        {"type": "VoltagesMagnitude", "port_id": "voltages_magnitude", "description": "Bus voltage magnitudes from feeder", "unit": "V"}
+    ],
+    "dynamic_outputs": [
+        {"type": "CommandList", "port_id": "change_commands", "description": "PV reactive power setpoint commands", "unit": ""}
+    ]
+}
