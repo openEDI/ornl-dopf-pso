@@ -3,7 +3,9 @@
 import numpy as np
 
 
-def compute_sensitivity_matrix(y_bus, bus_ids, base_voltages=None, base_power_mva=100.0):
+def compute_sensitivity_matrix(
+    y_bus, bus_ids, base_voltages=None, base_power_mva=100.0
+):
     """Compute voltage sensitivity dV_pu/dQ_kVAR.
 
     When base_voltages is provided, converts Y-bus to per-unit before
@@ -41,7 +43,7 @@ def compute_sensitivity_matrix(y_bus, bus_ids, base_voltages=None, base_power_mv
 
 
 def compute_pv_bounds(pv_capacity_kw, pv_active_kw=None):
-   
+    """Compute kVAR bounds for each PV system."""
     bounds = []
     for i, cap in enumerate(pv_capacity_kw):
         p = pv_active_kw[i] if pv_active_kw is not None else 0.0

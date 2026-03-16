@@ -1,4 +1,4 @@
-"""DOPF Federate """
+"""DOPF Federate."""
 
 import json
 import logging
