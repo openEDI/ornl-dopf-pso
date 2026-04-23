@@ -1,0 +1,11 @@
+{
+  "title": "ComponentParameters",
+  "type": "object",
+  "properties": {
+    "pv_buses":       { "title": "PV Buses",       "type": "array", "items": { "type": "string" } },
+    "pv_capacity_kw": { "title": "PV Capacity kW", "type": "array", "items": { "type": "number" } },
+    "num_particles":  { "title": "Num Particles",  "type": "integer" },
+    "max_iterations": { "title": "Max Iterations", "type": "integer" }
+  },
+  "required": [ "pv_buses", "pv_capacity_kw", "num_particles", "max_iterations" ]
+}
